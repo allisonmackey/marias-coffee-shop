@@ -8,21 +8,22 @@
 
 Product.destroy_all
 
-50.times do |index|
-  Product.create!(name: Faker::Coffee.blend_name, country_of_origin: Faker::Coffee.origin, 
-  cost: Faker::Number.within(range: 15..35))
+50.times do 
+  product = Product.create!(
+    name: Faker::Coffee.blend_name, 
+    country_of_origin: Faker::Coffee.origin, 
+    cost: Faker::Number.within(range: 15..35)
+  )
+
+  if product.persisted?
+    rand(15..50).times do
+      product.reviews.create!(
+        author: Faker::Name.name, 
+        content_body: Faker::Lorem.paragraph_by_chars(number: 65, supplemental: false), 
+        rating: rand(1..5)
+      )
+    
+    end
+  end
+  p "Created #{Product.count} products & #{Review.count} reviews"
 end
-
-p "Created #{Product.count} products"
-
-Review.destroy_all
-
-250.times do |index|
-  Review.create!(
-    author: Faker::Name.name, 
-    content_body: Faker::Lorem.paragraph_by_chars(number: 65, supplemental: false), 
-    rating: Faker::Number.within(range: 1..5), 
-    product_id: Faker::Number.within(range: 254..304))
-end
-
-p "Created #{Review.count} reviews"
