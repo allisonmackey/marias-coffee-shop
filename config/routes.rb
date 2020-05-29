@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'products#index'
+  root to: 'products#home'
   get 'home' => 'products#home'
   
   resources :products do  
