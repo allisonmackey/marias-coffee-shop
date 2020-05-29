@@ -1,14 +1,5 @@
 <h1> ADD NEW REVIEW </h1>
-<br>
-<%= form_for [@product, @review] do |f| %>
-  <input type="text" class ="form-control" name="review[author]" id="review_author" placeholder="Your Name">
-  <br>
-  <input type="text" class ="form-control" name="review[content_body]" id="review_content_body" placeholder="Enter Review">
-  <br>
-  <input type="number" class ="form-control" name="review[rating]" id="review_rating" placeholder="Rate Product 1-5">
-  <br>
-  <button type="submit" class="btn" name="commit" value="Create review" data-disable-with="Create review">Submit!</button>
-<% end %>
+<%= render "layouts/review_form" %>
 <br>
 
 <footer><%= link_to "HOME PAGE", home_path %> || <%= link_to "PRODUCTS", products_path %></footer>

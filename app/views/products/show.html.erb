@@ -1,5 +1,5 @@
 <h1><%= @product.name %></h1>
-<h3><%= @product.country_of_origin %> <%= @product.cost %></h3>
+<h3><%= @product.country_of_origin %> $<%= @product.cost %>.00</h3>
 
 <footer><%= link_to "EDIT", edit_product_path(@product) %>   ||   <%= link_to "DELETE", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %></footer>
 
