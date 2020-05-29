@@ -4,20 +4,21 @@
 <footer><%= link_to "EDIT", edit_product_path(@product) %>   ||   <%= link_to "DELETE", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %></footer>
 
 <% if @product.reviews.any? %>
-  <h4>REVIEWS:</h4>
-  <div class = "review">
+  <h4>PRODUCT REVIEWS:</h4>
+  <hr>
+  <div class = "container">
     <% @product.reviews.each do |review| %>
       <div class="row">
         <div class = "col">
-          <%= review.author %> 
-        </div> 
-        <div class = "col-4">
-          <%= review.rating %>
+          By: <%= review.author %> 
+        </div>
+        <div class = "col">
+          Rating: <%= review.rating %> of 5
         </div>
       </div>
-      <hr>
       <p><%= review.content_body %></p>
-      <footer><%= link_to "edit", edit_product_review_path(@product, @review)%></footer>
+      <p><%= link_to "edit", edit_product_review_path(@product, review)%><p>
+      <hr>
     <% end %>
    <div>
 <% else %>
