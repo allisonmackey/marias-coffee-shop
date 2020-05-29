@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :products do  
     resources :reviews
   end
+  get 'landing_page' => "custom_controller#landing_page"
 end
