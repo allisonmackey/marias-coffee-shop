@@ -1,8 +1,7 @@
 <%# PRODUCTS PAGE %>
-<h3>Available Products<h3>
+<h1>MARIA'S PRODUCE</h1>
 
 <% if @products.any? %>
-  
   <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
@@ -12,4 +11,5 @@
   <p>There are currently no products to display.</p>
 <% end %>
 
-<p><%= link_to "Add a product here!", new_product_path %></p>
+<p></p>
+<footer><%= link_to "HOME PAGE", home_path %> || <%= link_to "ADD PRODUCT", new_product_path %></footer>

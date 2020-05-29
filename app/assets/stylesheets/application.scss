@@ -19,9 +19,14 @@
 body {
   background-color: black;
 }
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+}
 .box {
-  padding: 100px;
-  margin: 10%;
+  padding: 50px;
+  margin: 15%;
   border-radius: 8px;
   justify-content: center;
   background-color: whitesmoke
@@ -32,3 +37,8 @@ body {
   background-color: black;
 }
 
+footer {
+  font-weight: 500;
+  margin-top: 30px;
+  text-align: center;
+}
