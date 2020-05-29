@@ -20,6 +20,4 @@ class Product < ApplicationRecord
       end  
       self.name = result.join(" ")
     end
-
-
 end
