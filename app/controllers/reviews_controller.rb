@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
-
+  def index
+    render :home
+  end
+  
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
