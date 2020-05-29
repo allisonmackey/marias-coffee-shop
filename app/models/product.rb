@@ -3,7 +3,9 @@ class Product < ApplicationRecord
   before_save(:titleize_product)
   validates :name, :cost, :country_of_origin, presence: true
   validates :cost, numericality: true
-  
+
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
+
   private
     def titleize_product
       no_caps = ["a", "is", "you", "he", "she", "it", "we", "you", "me", "him", "her", "us", "my",  "his", "its", "our", "who",  "if", "how", "as"]

@@ -16,7 +16,16 @@
 <br>
 <h4>NEWEST FEATURED PRODUCTS</h4>
 <%# CODE FOR THREE MOST RECENTLY ADDED PRODUCTS %>
-  
+
+<% if @most_recent_product.any? %>
+  <ul>
+  <% @most_recent_product.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+<% else %> 
+  <p>There are currently no products to display.</p>
+<% end %>
 
 <br>
 <h4>OUR MOST POPULAR PRODUCT</h4>
