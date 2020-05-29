@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @product %>
+
+<br>
+<%= form_for @product do |f| %>
+  <input type="text" class ="form-control" name="product[name]" id="product_name" placeholder="Enter Product Name">
+  <br>
+  <input type="text" class ="form-control" name="product[cost]" id="product_cost" placeholder="Enter Product Cost">
+  <br>
+  <input type="text" class ="form-control" name="product[country_of_origin]" id="product_country_of_origin" placeholder="Enter Product Country of Origin">
+  <br>
+  <button type="submit" class="btn" name="commit" value="Create Product" data-disable-with="Create Product">Submit!</button>
+<% end %>
+<br>

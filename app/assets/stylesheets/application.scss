@@ -15,3 +15,20 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: black;
+}
+.box {
+  padding: 100px;
+  margin: 10%;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: whitesmoke
+}
+
+.btn, .btn:hover {
+  color: white;
+  background-color: black;
+}
+

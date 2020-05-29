@@ -7,9 +7,9 @@ class ProductsController < ApplicationController
 
   def home 
     @products = Product.all 
-    render :landing_page
+    render :home
   end
-  
+
   def new
     @product = Product.new
     render :new
