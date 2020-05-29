@@ -1,6 +1,8 @@
-<%# PRODUCTS PAGE %>
-<h1>MARIA'S COFFEE </h1>
-
+<br>
+<h1> MARIA'S COFFEE</h1>
+<footer><%= link_to "HOME PAGE", home_path %> || <%= link_to "ADD PRODUCT", new_product_path %></footer>
+<br>
+<hr>
 <% if @products.any? %>
   <ul>
   <% @products.each do |product| %>
@@ -11,5 +13,3 @@
   <p>There are currently no products to display.</p>
 <% end %>
 
-<p></p>
-<footer><%= link_to "HOME PAGE", home_path %> || <%= link_to "ADD PRODUCT", new_product_path %></footer>

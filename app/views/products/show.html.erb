@@ -1,4 +1,6 @@
+<br>
 <h1><%= @product.name %></h1>
+<br>
 <hr>
 <div class="row">
   <div class="col-md-12">
@@ -8,7 +10,7 @@
       </div>
       <div class="col">
         <div class = "header">
-          <%= link_to "EDIT PRODUCT", edit_product_path(@product) %>   ||   <%= link_to "DELETE PRODUCT", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %>
+          <%= link_to "ADD REVIEW", new_product_review_path(@product)%> || <%= link_to "EDIT PRODUCT", edit_product_path(@product) %>   ||   <%= link_to "DELETE PRODUCT", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %>
         </div>
       </div>
     </div>
@@ -18,28 +20,18 @@
     <% if @product.reviews.any? %>
       <h4>PRODUCT REVIEWS:</h4>
       <hr>
-      <div class = "container">
         <% @product.reviews.each do |review| %>
-          <div class="row">
-            <div class = "col">
-              By: <%= review.author %> 
-            </div>
-            <div class = "col">
-              Rating: <%= review.rating %> of 5
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10">
-              <p><%= review.content_body %></p>
-              <p><%= link_to "edit", edit_product_review_path(@product, review)%><p>
-            </div>
-          </div>
+          By: <%= review.author %> | Rating: <%= review.rating %> of 5
+          <p><%= review.content_body %></p>
+          <p><%= link_to "edit", edit_product_review_path(@product, review)%><p>
+           
+         <hr>
         <% end %>
-      <div>
+     
     <% else %>
       <p>There are currently no reviews for this product!</p>
     <% end %>
 
-    <footer><%= link_to "ADD REVIEW", new_product_review_path(@product)%> || <%= link_to "HOME PAGE", home_path %> </footer>
+    <footer>| <%= link_to "HOME PAGE", home_path %> |</footer>
   </div>
 </div>

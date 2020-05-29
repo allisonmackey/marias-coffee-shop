@@ -8,7 +8,6 @@ class ProductsController < ApplicationController
   def home 
     @products = Product.all 
     @most_recent_product = Product.three_most_recent   
-    @most_popular_product = Product.most_popular
     render :home
   end
 
