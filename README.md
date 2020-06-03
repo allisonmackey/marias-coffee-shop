@@ -1,24 +1,50 @@
-# README
+# _Specialty Market_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _A practice application using Ruby & Rails. 5.29.2020_
 
-Things you may want to cover:
+#### By _**Allison Mackey**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_This application will allow the user to enter create a product, add a review to a product, & rate it._ 
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* _Clone Repository from GitHub :  https://github.com/amackey693/Week11Review_
+* _Open folder in Virtual Studio Code (or your text editor of choice)_
+* _Open your terminal & use the command **code .**_ this will open all files associated with this app._
+* _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
+* _Don't forget to run bundle install to create your Gemfile.lock as well._
+* _Create your own repository and push new changes to GitHub_
 
-* Database initialization
+## Behavior Driven Development 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+|   Behavior Description        |
+|-------------------------------|
+| 1. Routes user to 'home' page [X]|
+| 2. Allows user to view all products available [X]|
+| 3. Allows user to add/delete/update products [X]|
+| 4. Allows user to add a review & see all reviews for a product [X]|
+| 5. Allows user to delete & update a review [X]|
+| 6. Sends error 'flash' messages when the user doesn't fill out forms correctly [X]|
+| 7. Displays three most recently added products on the home page [X]|
 
-* Deployment instructions
 
-* ...
+## Known Bugs
+
+_No known bugs at this time_
+
+## Support and contact details
+
+_If you have any questions or any issues please feel free to submit an issue here: https://github.com/amackey693/Week11Review/issues_
+
+## Technologies Used
+
+_Ruby, Rails, Gem, Pry, Capybara, ShouldaMatchers_ 
+
+
+### Licenses
+*MIT LICENSE*
+
+Copyright (c) 2020 **_Allison Mackey_**
