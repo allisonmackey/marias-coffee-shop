@@ -25,5 +25,6 @@ Product.destroy_all
     
     end
   end
-  p "Created #{Product.count} products & #{Review.count} reviews"
 end
+
+p "Created #{Product.count} products & #{Review.count} reviews"
