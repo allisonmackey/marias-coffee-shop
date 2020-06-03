@@ -1,7 +1,8 @@
 <h1> EDIT REVIEW </h1>
 <%= render "layouts/review_form" %>
+
 <div class ="delete">
-<%= link_to "DELETE THIS REVIEW", product_review_path(@product, @review), :data => {:confirm => "Are you sure you'd like to delete this review?", :method => "delete"} %>
+  <%= link_to "DELETE THIS REVIEW", product_review_path(@product, @review), :data => {:confirm => "Are you sure you'd like to delete this review?", :method => "delete"} %>
 </div>
 
 <footer><%= link_to "HOME PAGE", home_path %> || <%= link_to "PRODUCTS", products_path %></footer>
