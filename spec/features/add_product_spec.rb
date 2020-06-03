@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'add a product to page'do
+describe '#Products' do
   it 'adds a new product' do
     visit products_path
     click_link 'ADD PRODUCT'
@@ -11,5 +11,13 @@ describe 'add a product to page'do
     expect(page).to have_content 'Test Product'
   end
 
-  
+  it 'deletes a product' do   
+    test_product = Product.create(name:"Test", cost: 6, country_of_origin: 'Test Country', id: nil)
+    visit product_path(test_product.id) 
+    click_link 'DELETE PRODUCT'
+    expect(page).to have_no_content 'Test'
+  end
+
+
+
 end
