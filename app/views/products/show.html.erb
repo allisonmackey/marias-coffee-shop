@@ -31,11 +31,14 @@
         <% @product.reviews.each do |review| %>
           By: <%= review.author %> | Rating: <%= review.rating %> of 5
           <p><%= review.content_body %></p>
-          <p><%= link_to "edit", edit_product_review_path(@product, review)%><p>
-           
+          <%if current_user && current_user.admin %>
+            <p><%= link_to "edit", edit_product_review_path(@product, review)%><p>
+          <% end %>
          <hr>
         <% end %>
-        <%= paginate @reviews %>
+        <div class = "pagination">
+          <%= paginate @reviews %>
+        </div>
     <% else %>
       <p>There are currently no reviews for this product!</p>
     <% end %>

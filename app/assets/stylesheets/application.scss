@@ -16,21 +16,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 // HTML Elements
-body {
-  background-color: black;
-}
-
 a {
   color: rgb(96, 96, 96);
 }
 
+body {
+  background-color: black;
+}
+
+footer {
+  font-weight: 500;
+  margin-top: 30px;
+  text-align: center;
+}
 
 h1 {
   font-weight: 300;
   text-align: center;
 }
 
+h3 {
+  font-weight: 400;
+}
+
 // CUSTOM CLASSES
+.box.a:hover {
+  color: black;
+}
 
 .box {
   padding: 50px;
@@ -40,24 +52,6 @@ h1 {
   background-color: whitesmoke
 }
 
-
-a.box:hover {
-  color: black;
-
-}
-
-
-a.box:hover {
-  color: black;
-
-}
-
-.top_links {
-  padding-left: 15px;
-  padding-top: 10px;
-}
-
-// using?? find later
 .header {
   color: lightgrey;
   float: right;
@@ -66,12 +60,8 @@ a.box:hover {
   font-size: 12px;
 }
 
-footer {
-  font-weight: 500;
-  margin-top: 30px;
-  text-align: center;
+.top_links {
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
-h3 {
-  font-weight: 400;
-}
