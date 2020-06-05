@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 describe '#Reviews' do
+  before(:each)do
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin=> true )
+    login_as(user, :scope => :user)
+  end
+  
   it 'adds a new review' do
     test_product = Product.create(name:"Test", cost: 6, country_of_origin: 'Test Country', id: nil)
     visit product_path(test_product.id) 
