@@ -1,9 +1,9 @@
 <br>
 <h1> MARIA'S COFFEE</h1>
 <footer>
-  <%= link_to "HOME PAGE", home_path %> || 
+  <%= link_to "HOME PAGE", home_path %>  
    <% if current_user && current_user.admin %>  
-     <%= link_to "ADD PRODUCT", new_product_path %>
+    || <%= link_to "ADD PRODUCT", new_product_path %>
    <% end %>
 </footer>
 <br>

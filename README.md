@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application will allow the user to enter create a product, add a review to a product, & rate it._ 
+_This application will allow the user to enter create a product, add a review to a product, & rate it. To see full admin functionality use the email: admin@admin.com & password: admin123 to log-in!_ 
 
 ## Setup/Installation Requirements
 
@@ -29,7 +29,7 @@ _This application will allow the user to enter create a product, add a review to
 | 5. Allows user to delete & update a review [X]|
 | 6. Sends error 'flash' messages when the user doesn't fill out forms correctly [X]|
 | 7. Displays three most recently added products on the home page [X]|
-| 8. Allows admin to log in and out [] |
+| 8. Allows admin to log in and out [X] |
 | 9. Allows admin to delete products & reviews [] |
 | 10. Allows user to create account [] |
 | 11. Allows user to log in and out [] |
