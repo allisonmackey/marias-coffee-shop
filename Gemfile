@@ -43,16 +43,23 @@ gem 'faker'
 gem 'devise'
 gem 'kaminari'
 
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
-  gem 'launchy'
   gem 'pry'
-  gem 'capybara'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_bot_rails'
+  gem 'simplecov', require: false
+  gem 'dotenv-rails'
+  gem 'vcr' 
+  gem 'webmock' 
  
 end
 

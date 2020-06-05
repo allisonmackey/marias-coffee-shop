@@ -4,10 +4,9 @@ describe '#Products' do
 
 
   it 'adds a new product' do
-    visit home_path
-    click_link 'SIGN IN'
-    fill_in "user[email]", :with => 'admin@admin.com'
-    fill_in "user[password]", :with => 'admin123'
+    visit new_user_session_path
+    fill_in 'user[email]', :with => 'admin@admin.com'
+    fill_in 'user[password]', :with => 'admin123'
     click_on 'Log in'
 
     visit products_path
