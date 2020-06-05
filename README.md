@@ -30,13 +30,14 @@ _This application will allow the user to enter create a product, add a review to
 | 6. Sends error 'flash' messages when the user doesn't fill out forms correctly [X]|
 | 7. Displays three most recently added products on the home page [X]|
 | 8. Allows admin to log in and out [X] |
-| 9. Allows admin to delete products & reviews [] |
-| 10. Allows user to create account [] |
-| 11. Allows user to log in and out [] |
-| 12. Doesn't allow user to delete any items [] |
+| 9. Allows admin to delete products & reviews [X] |
+| 10. Allows user to create account [X] |
+| 11. Allows user to log in and out [X] |
+| 12. Doesn't allow user to delete any items [X] |
+
 ## Known Bugs
 
-_No known bugs at this time_
+_Does not deploy to Heroku, need to de-bug_
 
 ## Support and contact details
 
