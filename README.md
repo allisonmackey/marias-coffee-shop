@@ -34,9 +34,6 @@ _This application will allow the user to enter create a product, add a review to
 | 10. Allows user to create account [] |
 | 11. Allows user to log in and out [] |
 | 12. Doesn't allow user to delete any items [] |
-
-
-
 ## Known Bugs
 
 _No known bugs at this time_
