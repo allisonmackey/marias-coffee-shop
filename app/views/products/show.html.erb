@@ -10,8 +10,13 @@
       </div>
       <div class="col">
         <div class = "header">
-           <%= link_to "BACK", products_path%> || <%= link_to "ADD REVIEW", new_product_review_path(@product)%> || 
-           <%= link_to "EDIT PRODUCT", edit_product_path(@product) %>   ||   <%= link_to "DELETE PRODUCT", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %>
+           <%= link_to "BACK", products_path%> || 
+            <%= link_to "ADD REVIEW", new_product_review_path(@product)%> || 
+            <% if current_user.is_admin? %>  
+              <%= link_to "ADD PRODUCT", new_product_path %>
+            <% end %>
+            
+            <%= link_to "EDIT PRODUCT", edit_product_path(@product) %>   ||   <%= link_to "DELETE PRODUCT", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %>
         </div>
       </div>
     </div>
