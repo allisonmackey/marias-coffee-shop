@@ -9,8 +9,13 @@ describe '#Products' do
       click_on 'Log in'
     end
   end
-  
+
   it 'adds a new product' do
+    
+    fill_in "user[email]", :with => 'admin@admin.com'
+    fill_in "user[password]", :with => 'admin123'
+    click_on 'Log in'
+
     visit products_path
     click_link 'ADD PRODUCT'
     fill_in "product[name]", :with => 'TEST PRODUCT'
