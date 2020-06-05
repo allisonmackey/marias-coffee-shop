@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @reviews = @product.reviews.order(:updated_at).page(params[:page]).paginates_per
+    @reviews = @product.reviews.order(:updated_at).page(params[:page])
     render :show
   end
 
