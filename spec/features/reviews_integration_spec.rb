@@ -17,7 +17,6 @@ describe '#Reviews' do
     test_review = Review.create(author:"Test Author", content_body: 'testing review body need at leat 50 characters: testing, testing.', rating: 4, product_id: test_product.id, id: nil)
     visit edit_product_review_path(test_product, test_review)
     click_link "DELETE THIS REVIEW"
-    # click_on "ok"
     expect(page).to have_no_content(test_review)
   end
 end

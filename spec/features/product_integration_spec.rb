@@ -7,13 +7,14 @@ describe '#Products' do
     user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin=> true )
     login_as(user, :scope => :user)
     visit new_product_path
-    fill_in "product[name]", :with => 'TEST PRODUCT'
+    fill_in "product[name]", :with => '123Test'
     fill_in "product[cost]", :with => '100'
     fill_in "product[country_of_origin]",  :with => 'TEST COUNTRY'
     click_on 'Submit!'
+
     save_and_open_page
   
-    expect(page).to have_content 'Test Product'
+    expect(page).to have_content '123Test'
   end
 
 #   it 'deletes a product' do   
