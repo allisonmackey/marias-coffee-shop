@@ -27,11 +27,13 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+ 
     render :edit
   end
 
   def show
     @product = Product.find(params[:id])
+    @reviews = @product.reviews.order(:updated_at).page(params[:page]).paginates_per
     render :show
   end
 
