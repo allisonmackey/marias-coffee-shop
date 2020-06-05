@@ -11,10 +11,7 @@ describe '#Products' do
     fill_in "product[cost]", :with => '100'
     fill_in "product[country_of_origin]",  :with => 'TEST COUNTRY'
     click_on 'Submit!'
-
-    save_and_open_page
-  
-    expect(page).to have_content '123Test'
+    expect(page).to have_content'123 Test'
   end
 
 #   it 'deletes a product' do   
