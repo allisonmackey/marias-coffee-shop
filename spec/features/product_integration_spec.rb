@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe '#Products' do
+  before(:each) do
+      visit home_path
+      click_link 'SIGN IN'
+      fill_in "user[email]", :with => 'admin@admin.com'
+      fill_in "user[password]", :with => 'admin123'
+      click_on 'Log in'
+    end
+  end
+  
   it 'adds a new product' do
     visit products_path
     click_link 'ADD PRODUCT'
