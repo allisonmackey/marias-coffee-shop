@@ -4,17 +4,15 @@ describe '#Products' do
 
 
   it 'adds a new product' do
-    visit new_user_session_path
-    fill_in 'user[email]', :with => 'admin@admin.com'
-    fill_in 'user[password]', :with => 'admin123'
-    click_on 'Log in'
-
-    visit products_path
-    click_link 'ADD PRODUCT'
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin=> true )
+    login_as(user, :scope => :user)
+    visit 'products/new'
     fill_in "product[name]", :with => 'TEST PRODUCT'
     fill_in "product[cost]", :with => '100'
     fill_in "product[country_of_origin]",  :with => 'TEST COUNTRY'
     click_on 'Submit!'
+    save_and_open_page
+  
     expect(page).to have_content 'Test Product'
   end
 

@@ -2,7 +2,6 @@
 require 'spec_helper'
 require 'factory_bot'
 
-
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
@@ -36,6 +35,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -68,6 +68,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
+RSpec.configure do |config|
+  config.include Warden::Test::Helpers
+end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
@@ -75,3 +78,4 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
