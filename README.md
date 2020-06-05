@@ -31,6 +31,8 @@ _This application will allow the user to enter create a product, add a review to
 | 7. Displays three most recently added products on the home page [X]|
 
 
+Week 11 Project & Objectives
+
 ## Known Bugs
 
 _No known bugs at this time_
