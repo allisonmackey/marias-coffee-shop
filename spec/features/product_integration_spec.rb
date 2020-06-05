@@ -14,12 +14,14 @@ describe '#Products' do
     expect(page).to have_content'123 Test'
   end
 
-#   it 'deletes a product' do   
-#     test_product = Product.create(name:"Test", cost: 6, country_of_origin: 'Test Country', id: nil)
-#     visit product_path(test_product.id) 
-#     click_link 'DELETE PRODUCT'
-#     expect(page).to have_no_content 'Test'
-#   end
+  it 'deletes a product' do   
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin=> true )
+    login_as(user, :scope => :user)
+    test_product = Product.create(name:"123 Test", cost: 6, country_of_origin: 'Test Country', id: nil)
+    visit product_path(test_product.id) 
+    click_link 'DELETE PRODUCT'
+    expect(page).to have_no_content '123 Test'
+  end
 
 #   it 'edits a product' do   
 #     test_product = Product.create(name:"Test", cost: 6, country_of_origin: 'Test Country', id: nil)

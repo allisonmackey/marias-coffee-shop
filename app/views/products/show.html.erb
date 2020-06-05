@@ -17,7 +17,7 @@
             <% if current_user && current_user.admin %>  
                || <%= link_to "ADD PRODUCT", new_product_path %> 
                || <%= link_to "EDIT PRODUCT", edit_product_path(@product) %>   
-               || <%= link_to "DELETE PRODUCT", product_path(@product), :data => {:confirm => "Are you sure you'd like to delete this product?", :method => "delete"} %>
+               || <%= link_to "DELETE PRODUCT", product_path(@product), method: :delete %>
             <% end %>
         </div>
       </div>
