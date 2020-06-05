@@ -1,5 +1,16 @@
 <h1> EDIT REVIEW </h1>
-<%= render "layouts/review_form" %>
+<%= render "layouts/errors", :object => @review %>
+<br>
+<%= form_for [@product, @review] do |f| %>
+  <input type="text" class ="form-control" name="review[author]" id="review_author" placeholder="Your Name">
+  <br>
+  <input type="text" class ="form-control" name="review[content_body]" id="review_content_body" rows="6" placeholder="Enter Review">
+  <br>
+  <input type="number" class ="form-control" name="review[rating]" id="review_rating" placeholder="Rate Product 1-5">
+  <br>
+  <button type="submit" class="btn" name="commit" value="Create review" data-disable-with="Create review">Submit!</button>
+<% end %>
+<br>
 
 <div class ="delete">
   <%= link_to "DELETE THIS REVIEW", product_review_path(@product, @review), :data => {:confirm => "Are you sure you'd like to delete this review?", :method => "delete"} %>
