@@ -17,4 +17,5 @@ describe '#Users' do
     expect(page).to have_no_content 'DELETE'
     expect(page).to have_no_content 'ADD'
   end
+
 end
