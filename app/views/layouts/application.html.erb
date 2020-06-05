@@ -8,8 +8,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+  <br>
+  <div class = "top_links">
+    <% if current_user %>
+    <%= current_user.email %> | <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete  %> 
+    <% else %>
+    <%= link_to "SIGN UP", new_user_registration_path %> | <%= link_to "SIGN IN", new_user_session %>
+    <% end %>
+  </div>
     <div class = "box">
       <%= yield %>
     </div>

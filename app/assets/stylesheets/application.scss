@@ -15,15 +15,23 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+// HTML Elements
 body {
   background-color: black;
 }
+
+a {
+  color: rgb(96, 96, 96);
+}
+
 
 h1 {
   font-weight: 300;
   text-align: center;
 }
+
+// CUSTOM CLASSES
+
 .box {
   padding: 50px;
   margin: 15%;
@@ -32,20 +40,24 @@ h1 {
   background-color: whitesmoke
 }
 
-.btn, .btn:hover {
-  color: white;
-  background-color: black;
-}
 
-a {
-  color: rgb(96, 96, 96);
-}
-
-a:hover {
+a.box:hover {
   color: black;
 
 }
 
+
+a.box:hover {
+  color: black;
+
+}
+
+.top_links {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+// using?? find later
 .header {
   color: lightgrey;
   float: right;

@@ -8,6 +8,18 @@ Rails.application.routes.draw do
   end
 
   #devise routes
-  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
-  
+  devise_for :users, controllers: { 
+    sessions: 'devise/sessions',
+    registrations: 'devise/registrations',
+    # confirmations: 'users/confirmations',
+    # omniauthcallbacks: 'users/omniauthcallbacks',
+    # passwords: 'users/passwords',
+    # unlocks: 'users/unlocks'
+  }
+
+  # devise_for :users, :path => '', :path_names => { 
+  #   :sign_in => "login", 
+  #   :sign_out => "logout", 
+  #   :sign_up => "register" 
+  # }
 end
