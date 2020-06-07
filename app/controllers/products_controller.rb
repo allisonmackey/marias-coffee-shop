@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
     @products = Product.all 
     @most_recent_product = Product.three_most_recent   
     @most_reviewed_product = Product.most_reviews
+    @products_made_in_usa = Product.made_in_usa
     render :home
   end
 

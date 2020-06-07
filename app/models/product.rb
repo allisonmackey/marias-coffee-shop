@@ -4,13 +4,17 @@ class Product < ApplicationRecord
   validates :name, :cost, :country_of_origin, presence: true
   validates :cost, numericality: true
  
+  scope :made_in_usa, -> {(
+    Product.where("country_of_origin>=?", "USA")
+  )}
+
   scope :most_reviews, -> {(
     select("products.id, products.name, count(reviews.id) as reviews_count")
     .joins(:reviews)
     .group("products.id")
     .order("reviews_count DESC")
     .limit(5)
-    )}
+  )}
 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
   private

@@ -34,5 +34,16 @@
 <% else %> 
   <p>There are currently no products to display.</p>
 <% end %>
-<%# CODE FOR MOST POPULAR PRODUCT %>
 
+<br>
+<h4>OUR PRODUCTS MADE IN USA</h4>
+<p>Ullamco esse sit fugiat ut voluptate adipisicing. Dolore sit nulla qui adipisicing. Proident tempor ex elit esse amet quis ex voluptate aliquip esse deserunt duis.</p>
+<% if @products_made_in_usa.any? %>
+  <ul>
+  <% @products_made_in_usa.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+<% else %> 
+  <p>Well, it doesn't look like the USA makes very good coffee...</p>
+<% end %>
