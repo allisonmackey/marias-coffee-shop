@@ -25,5 +25,14 @@
 <br>
 <h4>OUR MOST POPULAR PRODUCT</h4>
 <p>Ullamco esse sit fugiat ut voluptate adipisicing. Dolore sit nulla qui adipisicing. Proident tempor ex elit esse amet quis ex voluptate aliquip esse deserunt duis.</p>
+<% if @most_reviewed_product.any? %>
+  <ul>
+  <% @most_reviewed_product.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %> has <%= product.reviews.count %> reviews!</li>
+  <% end %>
+  </ul>
+<% else %> 
+  <p>There are currently no products to display.</p>
+<% end %>
 <%# CODE FOR MOST POPULAR PRODUCT %>
 
