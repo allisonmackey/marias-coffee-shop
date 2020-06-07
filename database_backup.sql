@@ -212,12 +212,10 @@ COPY public.products (id, name, cost, country_of_origin, created_at, updated_at)
 472	The Captain's Cup	15	Central Valley, Costa Rica	2020-05-29 22:32:12.073101	2020-05-29 22:32:12.073101
 473	Major Extract	17	Kabirizi, Rwanda	2020-05-29 22:32:12.113425	2020-05-29 22:32:12.113425
 474	Wake Up Blend	35	El Paraiso, Honduras	2020-05-29 22:32:12.168338	2020-05-29 22:32:12.168338
-475	Joe Java	20	Western Region, Kigoma, Tanzania	2020-05-29 22:32:12.209123	2020-05-29 22:32:12.209123
 477	Veranda Cake	34	Manjarabad, India	2020-05-29 22:32:12.412022	2020-05-29 22:32:12.412022
 478	Evening Extract	23	Tecapa-Chinameca, El Salvador	2020-05-29 22:32:12.503024	2020-05-29 22:32:12.503024
 479	Captain's	20	Southern Region, Morogoro, Tanzania	2020-05-29 22:32:12.561451	2020-05-29 22:32:12.561451
 480	Melty Java	15	Manjarabad, India	2020-05-29 22:32:12.605228	2020-05-29 22:32:12.605228
-481	Winter Treat	22	Western Region, Kigoma, Tanzania	2020-05-29 22:32:12.687865	2020-05-29 22:32:12.687865
 482	The Town	18	Rulindo, Rwanda	2020-05-29 22:32:12.774088	2020-05-29 22:32:12.774088
 483	Wake Up Coffee	25	Nariño, Colombia	2020-05-29 22:32:12.871118	2020-05-29 22:32:12.871118
 484	Joe Treat	33	Madriz, Nicaragua	2020-05-29 22:32:12.911053	2020-05-29 22:32:12.911053
@@ -243,7 +241,9 @@ COPY public.products (id, name, cost, country_of_origin, created_at, updated_at)
 504	Joe Breaker	20	Sul Minas, Brazil	2020-05-29 22:32:14.49011	2020-05-29 22:32:14.49011
 505	Holiday Bean	18	Raimi, Yemen	2020-05-29 22:32:14.626145	2020-05-29 22:32:14.626145
 506	Seattle Light	35	Kayanza, Burundi	2020-05-29 22:32:14.713274	2020-05-29 22:32:14.713274
-507	Red Volcano	19	Volcan, Panama	2020-05-29 22:32:14.805783	2020-05-29 22:32:14.805783
+475	Joe Java	20	USA	2020-05-29 22:32:12.209123	2020-06-07 22:23:47.008991
+481	Winter Treat	22	USA	2020-05-29 22:32:12.687865	2020-06-07 22:24:27.044547
+507	Red Volcano	19	USA	2020-05-29 22:32:14.805783	2020-06-07 22:24:48.988217
 \.
 
 
