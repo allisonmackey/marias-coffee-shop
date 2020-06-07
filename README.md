@@ -10,6 +10,7 @@ _This application will allow the user to enter create a product, add a review to
 
 ## Setup/Installation Requirements
 
+* _View this project on Heroku here: https://glacial-fjord-91313.herokuapp.com/_
 * _Clone Repository from GitHub :  https://github.com/amackey693/Week11Review_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
 * _Open your terminal & use the command **code .**_ this will open all files associated with this app._
