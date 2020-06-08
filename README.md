@@ -38,7 +38,7 @@ _This application will allow the user to enter create a product, add a review to
 
 ## Known Bugs
 
-_Does not deploy to Heroku, need to de-bug_
+_Deploys to Heroku, does not include seeded database_
 
 ## Support and contact details
 
