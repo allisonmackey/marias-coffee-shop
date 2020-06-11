@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :home, :show]
 
   def index
     @products = Product.all.order(:name).page(params[:page])
